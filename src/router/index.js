@@ -44,6 +44,12 @@ export const constantRouterMap = [
             },
             component: () => import('@/page/enterprise/listenter'),
       },{
+        path: '/manageenter/addListenter',
+        name: 'addListenter',
+        meta: {
+        },
+        component: () => import('@/page/enterprise/addListenter'),
+      },{
          path: 'manageuser/adduser',
          name: 'madduser',
          meta: {

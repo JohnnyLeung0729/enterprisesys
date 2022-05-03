@@ -16,6 +16,14 @@
         prop="address"
         label="地址">
       </el-table-column>
+      <el-table-column
+          fixed="right"
+          label="操作"
+          width="100">
+        <template slot-scope="scope">
+          <el-button @click="handleClick(scope.row)" type="text" size="small">添加企业</el-button>
+        </template>
+      </el-table-column>
     </el-table>
 </template>
 
@@ -39,7 +47,8 @@
             date: '2016-05-03',
             name: '王小虎',
             address: '上海市普陀区金沙江路 1516 弄'
-          }]
+          }
+          ]
         }
       },
       created () {
@@ -57,6 +66,10 @@
             }).catch(err => {
               console.log(err)
             })
+        },
+        handleClick(row){
+          console.log(row)
+          this.$router.push({path: 'addListenter'})
         }
       }
     }
